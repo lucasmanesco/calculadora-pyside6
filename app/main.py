@@ -1,18 +1,21 @@
 import sys
 
 from main_window import MainWindow
-from PySide6.QtWidgets import QApplication, QLabel
+from PySide6.QtWidgets import QApplication
 
 if __name__ == '__main__':
+
+    # Fix Icon Bug (Win11)
+    if sys.platform.startswith('win'):
+        import ctypes
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+            u'CompanyName.ProductName.SubProduct.VersionInformation')
+
+    # Criando App
     app = QApplication(sys.argv)
     window = MainWindow()
-
-    label1 = QLabel('O meu texto')
-    label1.setStyleSheet('font-size: 50px')
-    window.v_layout.addWidget(label1)
-
-    # Última coisa a ser feita:
+    # Ajustes
     window.adjustFixedSize()
-
+    # Executando App
     window.show()
     app.exec()

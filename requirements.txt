@@ -1,0 +1,7 @@
+autopep8==2.0.2
+mypy==1.1.1
+mypy-extensions==1.0.0
+pycodestyle==2.10.0
+python-dotenv==1.0.0
+pytz==2023.3
+typing_extensions==4.5.0
