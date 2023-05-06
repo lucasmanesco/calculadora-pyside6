@@ -3,8 +3,8 @@ from pathlib import Path
 import qdarktheme
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import (QLabel, QLineEdit, QMainWindow, QVBoxLayout,
-                               QWidget)
+from PySide6.QtWidgets import (QGridLayout, QLabel, QLineEdit, QMainWindow,
+                               QPushButton, QVBoxLayout, QWidget)
 
 # Paths
 ROOT_DIR = Path(__file__).parent
@@ -37,13 +37,13 @@ def setupTheme():
             },
         },
         additional_qss=f"""
-    PushButton[cssClass="specialButton"] {{
+    QPushButton[cssClass="specialButton"] {{
         color: #fff;
         background: {PRIMARY_COLOR};}}
-    PushButton[cssClass="specialButton"]:hover {{
+    QPushButton[cssClass="specialButton"]:hover {{
         color: #fff;
         background: {DARKER_PRIMARY_COLOR};}}
-    PushButton[cssClass="specialButton"]:pressed {{
+    QPushButton[cssClass="specialButton"]:pressed {{
         color: #fff;
         background: {DARKEST_PRIMARY_COLOR};}}"""
     )
@@ -72,7 +72,7 @@ class MainWindow(QMainWindow):
         self.setFixedSize(self.width(), self.height())
 
     # Adicionar Widgets no Layout
-    def addToVLayout(self, widget: QWidget):
+    def addWidgetToVLayout(self, widget: QWidget):
         self.vLayout.addWidget(widget)
 
 
@@ -97,3 +97,28 @@ class Memo(QLabel):
     def configStyle(self):
         self.setStyleSheet(f'font-size: {SMALL_FONT_SIZE}px;')
         self.setAlignment(Qt.AlignmentFlag.AlignRight)
+
+
+class Button(QPushButton):
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+        self.configStyle()
+
+    def configStyle(self):
+        font = self.font()
+        font.setPixelSize(MEDIUM_FONT_SIZE)
+        self.setFont(font)
+        self.setMinimumSize(75, 75)
+        self.setProperty('cssClass', 'specialButton')
+
+
+class ButtonsGrid(QGridLayout):
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+        self._grid_mask = [
+            ['C', '◀', '^', '/'],
+            ['7', '8', '9', '*'],
+            ['4', '5', '6', '-'],
+            ['1', '2', '3', '+'],
+            ['',  '0', '.', '='],
+        ]
