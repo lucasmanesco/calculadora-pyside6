@@ -1,7 +1,7 @@
 import easyfunc as ef
 import qdarktheme
 import variables as v
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, Slot
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import (QGridLayout, QLabel, QLineEdit, QMainWindow,
                                QPushButton, QVBoxLayout, QWidget)
@@ -95,7 +95,7 @@ class Button(QPushButton):
 
 
 class ButtonsGrid(QGridLayout):
-    def __init__(self, *args, **kwargs) -> None:
+    def __init__(self, display: Display,  *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self._gridMask = [
             ['C', '◀', '^', '/'],
@@ -105,6 +105,7 @@ class ButtonsGrid(QGridLayout):
             ['',  '0', '.', '='],
         ]
 
+        self.display = display
         self._makeGrid()
 
     def _makeGrid(self):
@@ -116,3 +117,17 @@ class ButtonsGrid(QGridLayout):
                     button.setProperty('cssClass', 'specialButton')
 
                 self.addWidget(button, i, j)
+                buttonSlot = self._makeButtonDisplaySlot(
+                    self._insertButtonTextToDisplay, button
+                )
+                button.clicked.connect(buttonSlot)
+
+    def _makeButtonDisplaySlot(self, func, *args, **kwargs):
+        @Slot(bool)
+        def realSlot(_):
+            func(*args, **kwargs)
+        return realSlot
+
+    def _insertButtonTextToDisplay(self, button):
+        buttonText = button.text()
+        self.display.insert(buttonText)
