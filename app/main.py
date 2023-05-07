@@ -1,7 +1,6 @@
 import sys
 
-from calculator import (Button, ButtonsGrid, Display, MainWindow, Memo,
-                        setupTheme)
+from calculator import ButtonsGrid, Display, MainWindow, Memo, setupTheme
 from PySide6.QtWidgets import QApplication
 
 if __name__ == '__main__':
@@ -31,11 +30,6 @@ if __name__ == '__main__':
     # Grid
     buttonsGrid = ButtonsGrid()
     window.vLayout.addLayout(buttonsGrid)
-
-    # Botões
-    buttonsGrid.addWidget(Button('7'), 0, 0)
-    buttonsGrid.addWidget(Button('8'), 0, 1)
-    buttonsGrid.addWidget(Button('9'), 0, 2)
 
     # Ajustes
     window.adjustFixedSize()
