@@ -95,7 +95,7 @@ class Button(QPushButton):
 
 
 class ButtonsGrid(QGridLayout):
-    def __init__(self, display: Display,  *args, **kwargs) -> None:
+    def __init__(self, display: Display, memo: Memo,  *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self._gridMask = [
             ['C', '◀', '^', '/'],
@@ -106,23 +106,43 @@ class ButtonsGrid(QGridLayout):
         ]
 
         self.display = display
+        self.memo = memo
+        self._equation = ''
         self._makeGrid()
+
+    @property
+    def equation(self):
+        return self._equation
+
+    @equation.setter
+    def equation(self, value):
+        self._equation = value
+        self.memo.setText(value)
 
     def _makeGrid(self):
         for i, row in enumerate(self._gridMask):
             for j, buttonText in enumerate(row):
                 button = Button(buttonText)
 
-                if ef.isNumOrDot(buttonText) and not ef.isEmpty(buttonText):
+                if not ef.isNumOrDot(buttonText)\
+                        and not ef.isEmpty(buttonText):
                     button.setProperty('cssClass', 'specialButton')
+                    self._configSpecialButton(button)
 
                 self.addWidget(button, i, j)
-                buttonSlot = self._makeButtonDisplaySlot(
-                    self._insertButtonTextToDisplay, button
-                )
-                button.clicked.connect(buttonSlot)
+                slot = self._makeSlot(self._insertButtonTextToDisplay, button)
+                self._connectButtonClicked(button, slot)
 
-    def _makeButtonDisplaySlot(self, func, *args, **kwargs):
+    def _connectButtonClicked(self, button, slot):
+        button.clicked.connect(slot)
+
+    def _configSpecialButton(self, button):
+        text = button.text()
+
+        if text == 'C':
+            self._connectButtonClicked(button, self._clear)
+
+    def _makeSlot(self, func, *args, **kwargs):
         @Slot(bool)
         def realSlot(_):
             func(*args, **kwargs)
@@ -136,3 +156,6 @@ class ButtonsGrid(QGridLayout):
             return
 
         self.display.insert(buttonText)
+
+    def _clear(self):
+        self.display.clear()
