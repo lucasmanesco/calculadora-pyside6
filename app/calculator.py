@@ -1,3 +1,5 @@
+import math
+
 import easyfunc as ef
 import qdarktheme
 import variables as v
@@ -98,7 +100,7 @@ class ButtonsGrid(QGridLayout):
     def __init__(self, display: Display, memo: Memo,  *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self._gridMask = [
-            ['C', '◀', '^', '/'],
+            ['C', 'D', '^', '/'],
             ['7', '8', '9', '*'],
             ['4', '5', '6', '-'],
             ['1', '2', '3', '+'],
@@ -148,7 +150,10 @@ class ButtonsGrid(QGridLayout):
         if text == 'C':
             self._connectButtonClicked(button, self._clear)
 
-        if text in '+-/*':
+        if text in 'D':
+            self._connectButtonClicked(button, self.display.backspace)
+
+        if text in '+-/*^':
             self._connectButtonClicked(
                 button,
                 self._makeSlot(self._operatorClicked, button)
@@ -206,9 +211,14 @@ class ButtonsGrid(QGridLayout):
         result = 0.0
 
         try:
-            result = eval(self.equation)
+            if '^' in self.equation and isinstance(self._left, float):
+                result = math.pow(self._left, self._right)
+            else:
+                result = eval(self.equation)
         except ZeroDivisionError:
             print('Zero Division Error')
+        except OverflowError:
+            print('Overflow Error.')
 
         self.display.clear()
         self.memo.setText(f'{self.equation} = {result}')
