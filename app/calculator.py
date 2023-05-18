@@ -6,7 +6,7 @@ import variables as v
 from PySide6.QtCore import Qt, Slot
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import (QGridLayout, QLabel, QLineEdit, QMainWindow,
-                               QPushButton, QVBoxLayout, QWidget)
+                               QMessageBox, QPushButton, QVBoxLayout, QWidget)
 
 
 def setupTheme():
@@ -60,6 +60,9 @@ class MainWindow(QMainWindow):
     def addWidgetToVLayout(self, widget: QWidget):
         self.vLayout.addWidget(widget)
 
+    def makeMsgBox(self):
+        return QMessageBox(self)
+
 
 class Display(QLineEdit):
     def __init__(self, *args, **kwargs) -> None:
@@ -97,7 +100,8 @@ class Button(QPushButton):
 
 
 class ButtonsGrid(QGridLayout):
-    def __init__(self, display: Display, memo: Memo,  *args, **kwargs) -> None:
+    def __init__(self, display: Display, memo: Memo, window: 'MainWindow',
+                 *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self._gridMask = [
             ['C', 'D', '^', '/'],
@@ -109,6 +113,7 @@ class ButtonsGrid(QGridLayout):
 
         self.display = display
         self.memo = memo
+        self.window = window
         self._equation = ''
         self._equationInitialValue = 'Sua conta'
         self._left = None
@@ -190,7 +195,7 @@ class ButtonsGrid(QGridLayout):
         self.display.clear()
 
         if not ef.isValidNumber(displayText) and self._left is None:
-            print('Não tem nada pra colocar no valor da esquerda')
+            self._showError('Você não digitou nada.')
             return
 
         if self._left is None:
@@ -224,3 +229,22 @@ class ButtonsGrid(QGridLayout):
         self.memo.setText(f'{self.equation} = {result}')
         self._left = result
         self._right = None
+
+        if result == 'error':
+            self._left = None
+
+    def _makeDialog(self, text):
+        msgBox = self.window.makeMsgBox()
+        msg.setText(text)
+        return msgBox
+
+    def _showError(self, text):
+        msgBox = self.window.makeMsgBox()
+        msgBox.setText(text)
+        msgBox.setIcon(msgBox.Icon.Warning)
+
+        msgBox.setStandardButtons(
+            msgBox.StandardButton.Ok
+        )
+
+        msgBox.exec()
