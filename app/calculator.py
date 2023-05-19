@@ -3,8 +3,8 @@ import math
 import easyfunc as ef
 import qdarktheme
 import variables as v
-from PySide6.QtCore import Qt, Slot
-from PySide6.QtGui import QIcon
+from PySide6.QtCore import Qt, Signal, Slot
+from PySide6.QtGui import QIcon, QKeyEvent
 from PySide6.QtWidgets import (QGridLayout, QLabel, QLineEdit, QMainWindow,
                                QMessageBox, QPushButton, QVBoxLayout, QWidget)
 
@@ -65,6 +65,10 @@ class MainWindow(QMainWindow):
 
 
 class Display(QLineEdit):
+    eqPressed = Signal()
+    delPressed = Signal()
+    clearPressed = Signal()
+
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.configStyle()
@@ -75,6 +79,35 @@ class Display(QLineEdit):
         self.setMinimumWidth(v.MINIMUM_WIDTH)
         self.setAlignment(Qt.AlignmentFlag.AlignRight)
         self.setTextMargins(*[v.TEXT_MARGIN for _ in range(4)])
+
+    def keyPressEvent(self, event: QKeyEvent) -> None:
+        text = event.text().strip()
+        key = event.key()
+        KEYS = Qt.Key
+
+        isEnter = key in [KEYS.Key_Enter, KEYS.Key_Return, KEYS.Key_Equal]
+        isDelete = key in [KEYS.Key_Backspace, KEYS.Key_Delete, KEYS.Key_D]
+        isEsc = key in [KEYS.Key_Escape, KEYS.Key_C]
+
+        if isEnter:
+            print('Enter pressionado.')
+            self.eqPressed.emit()
+            return event.ignore()
+
+        if isDelete:
+            print('Delete pressionado.')
+            self.delPressed.emit()
+            return event.ignore()
+
+        if isEsc:
+            print('Esc pressionado.')
+            self.clearPressed.emit()
+            return event.ignore()
+
+        if ef.isEmpty(text):
+            return event.ignore()
+
+        print(text)
 
 
 class Memo(QLabel):
@@ -133,6 +166,10 @@ class ButtonsGrid(QGridLayout):
         self.memo.setText(value)
 
     def _makeGrid(self):
+        self.display.eqPressed.connect(lambda: print(123))
+        self.display.delPressed.connect(self.display.backspace)
+        self.display.clearPressed.connect(lambda: print(123))
+
         for i, row in enumerate(self._gridMask):
             for j, buttonText in enumerate(row):
                 button = Button(buttonText)
@@ -155,7 +192,7 @@ class ButtonsGrid(QGridLayout):
         if text == 'C':
             self._connectButtonClicked(button, self._clear)
 
-        if text in 'D':
+        if text == 'D':
             self._connectButtonClicked(button, self.display.backspace)
 
         if text in '+-/*^':
@@ -164,7 +201,7 @@ class ButtonsGrid(QGridLayout):
                 self._makeSlot(self._operatorClicked, button)
             )
 
-        if text in '=':
+        if text == '=':
             self._connectButtonClicked(button, self._eq)
 
     def _makeSlot(self, func, *args, **kwargs):
@@ -208,7 +245,7 @@ class ButtonsGrid(QGridLayout):
         displayText = self.display.text()
 
         if not ef.isValidNumber(displayText):
-            print('Sem nada para a direita')
+            self._showError('Conta incompleta.')
             return
 
         self._right = float(displayText)
@@ -221,9 +258,9 @@ class ButtonsGrid(QGridLayout):
             else:
                 result = eval(self.equation)
         except ZeroDivisionError:
-            print('Zero Division Error')
+            self._showError('Divisão por zero.')
         except OverflowError:
-            print('Overflow Error.')
+            self._showError('O valor ultrapassa a capacidade da calculadora.')
 
         self.display.clear()
         self.memo.setText(f'{self.equation} = {result}')
@@ -235,16 +272,15 @@ class ButtonsGrid(QGridLayout):
 
     def _makeDialog(self, text):
         msgBox = self.window.makeMsgBox()
-        msg.setText(text)
+        msgBox.setText(text)
         return msgBox
 
     def _showError(self, text):
-        msgBox = self.window.makeMsgBox()
-        msgBox.setText(text)
+        msgBox = self._makeDialog(text)
         msgBox.setIcon(msgBox.Icon.Warning)
+        msgBox.exec()
 
-        msgBox.setStandardButtons(
-            msgBox.StandardButton.Ok
-        )
-
+    def _showInfo(self, text):
+        msgBox = self._makeDialog(text)
+        msgBox.setIcon(msgBox.Icon.Information)
         msgBox.exec()
