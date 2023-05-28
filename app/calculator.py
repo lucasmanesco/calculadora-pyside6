@@ -68,6 +68,8 @@ class Display(QLineEdit):
     eqPressed = Signal()
     delPressed = Signal()
     clearPressed = Signal()
+    inputPressed = Signal(str)
+    operatorPressed = Signal(str)
 
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
@@ -88,26 +90,33 @@ class Display(QLineEdit):
         isEnter = key in [KEYS.Key_Enter, KEYS.Key_Return, KEYS.Key_Equal]
         isDelete = key in [KEYS.Key_Backspace, KEYS.Key_Delete, KEYS.Key_D]
         isEsc = key in [KEYS.Key_Escape, KEYS.Key_C]
+        isOperator = key in [KEYS.Key_Plus, KEYS.Key_Minus, KEYS.Key_Slash,
+                             KEYS.Key_Asterisk, KEYS.Key_P]
 
         if isEnter:
-            print('Enter pressionado.')
             self.eqPressed.emit()
             return event.ignore()
 
         if isDelete:
-            print('Delete pressionado.')
             self.delPressed.emit()
             return event.ignore()
 
         if isEsc:
-            print('Esc pressionado.')
             self.clearPressed.emit()
             return event.ignore()
 
         if ef.isEmpty(text):
             return event.ignore()
 
-        print(text)
+        if ef.isNumOrDot(text):
+            self.inputPressed.emit(text)
+            return event.ignore()
+
+        if isOperator:
+            if text.lower() == 'p':
+                text = '^'
+            self.operatorPressed.emit(text)
+            return event.ignore()
 
 
 class Memo(QLabel):
@@ -166,9 +175,11 @@ class ButtonsGrid(QGridLayout):
         self.memo.setText(value)
 
     def _makeGrid(self):
-        self.display.eqPressed.connect(lambda: print(123))
+        self.display.eqPressed.connect(lambda: print('eq'))
         self.display.delPressed.connect(self.display.backspace)
-        self.display.clearPressed.connect(lambda: print(123))
+        self.display.clearPressed.connect(lambda: print('clear'))
+        self.display.inputPressed.connect(lambda: print('input'))
+        self.display.operatorPressed.connect(lambda: print('operator'))
 
         for i, row in enumerate(self._gridMask):
             for j, buttonText in enumerate(row):
