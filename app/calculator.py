@@ -145,12 +145,13 @@ class ButtonsGrid(QGridLayout):
     def __init__(self, display: Display, memo: Memo, window: 'MainWindow',
                  *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
+
         self._gridMask = [
             ['C', 'D', '^', '/'],
             ['7', '8', '9', '*'],
             ['4', '5', '6', '-'],
             ['1', '2', '3', '+'],
-            ['',  '0', '.', '='],
+            ['N',  '0', '.', '='],
         ]
 
         self.display = display
@@ -175,11 +176,11 @@ class ButtonsGrid(QGridLayout):
         self.memo.setText(value)
 
     def _makeGrid(self):
-        self.display.eqPressed.connect(lambda: print('eq'))
+        self.display.eqPressed.connect(self._eq)
         self.display.delPressed.connect(self.display.backspace)
-        self.display.clearPressed.connect(lambda: print('clear'))
-        self.display.inputPressed.connect(lambda: print('input'))
-        self.display.operatorPressed.connect(lambda: print('operator'))
+        self.display.clearPressed.connect(self._clear)
+        self.display.inputPressed.connect(self._insertToDisplay)
+        self.display.operatorPressed.connect(self._configLeftOp)
 
         for i, row in enumerate(self._gridMask):
             for j, buttonText in enumerate(row):
@@ -191,7 +192,7 @@ class ButtonsGrid(QGridLayout):
                     self._configSpecialButton(button)
 
                 self.addWidget(button, i, j)
-                slot = self._makeSlot(self._insertButtonTextToDisplay, button)
+                slot = self._makeSlot(self._insertToDisplay, buttonText)
                 self._connectButtonClicked(button, slot)
 
     def _connectButtonClicked(self, button, slot):
@@ -206,30 +207,45 @@ class ButtonsGrid(QGridLayout):
         if text == 'D':
             self._connectButtonClicked(button, self.display.backspace)
 
+        if text == 'N':
+            self._connectButtonClicked(button, self._invertNumber)
+
         if text in '+-/*^':
             self._connectButtonClicked(
                 button,
-                self._makeSlot(self._operatorClicked, button)
+                self._makeSlot(self._configLeftOp, text)
             )
 
         if text == '=':
             self._connectButtonClicked(button, self._eq)
 
+    @Slot()
     def _makeSlot(self, func, *args, **kwargs):
         @ Slot(bool)
         def realSlot(_):
             func(*args, **kwargs)
         return realSlot
 
-    def _insertButtonTextToDisplay(self, button):
-        buttonText = button.text()
-        newDisplayValue = self.display.text() + buttonText
+    @Slot()
+    def _invertNumber(self):
+        displayText = self.display.text()
+
+        if not ef.isValidNumber(displayText):
+            return
+
+        number = ef.convertToNumber(displayText) * -1
+        self.display.setText(str(number))
+
+    @Slot()
+    def _insertToDisplay(self, text):
+        newDisplayValue = self.display.text() + text
 
         if not ef.isValidNumber(newDisplayValue):
             return
 
-        self.display.insert(buttonText)
+        self.display.insert(text)
 
+    @Slot()
     def _clear(self):
         self._left = None
         self._right = None
@@ -237,8 +253,8 @@ class ButtonsGrid(QGridLayout):
         self.equation = self._equationInitialValue
         self.display.clear()
 
-    def _operatorClicked(self, button):
-        buttonText = button.text()
+    @Slot()
+    def _configLeftOp(self, text):
         displayText = self.display.text()
         self.display.clear()
 
@@ -247,11 +263,12 @@ class ButtonsGrid(QGridLayout):
             return
 
         if self._left is None:
-            self._left = float(displayText)
+            self._left = ef.convertToNumber(displayText)
 
-        self._op = buttonText
+        self._op = text
         self.equation = f'{self._left} {self._op} ??'
 
+    @Slot()
     def _eq(self):
         displayText = self.display.text()
 
@@ -259,7 +276,7 @@ class ButtonsGrid(QGridLayout):
             self._showError('Conta incompleta.')
             return
 
-        self._right = float(displayText)
+        self._right = ef.convertToNumber(displayText)
         self.equation = f'{self._left} {self._op} {self._right}'
         result = 0.0
 
