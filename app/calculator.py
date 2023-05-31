@@ -244,6 +244,7 @@ class ButtonsGrid(QGridLayout):
             return
 
         self.display.insert(text)
+        self.display.setFocus()
 
     @Slot()
     def _clear(self):
@@ -252,11 +253,13 @@ class ButtonsGrid(QGridLayout):
         self._op = None
         self.equation = self._equationInitialValue
         self.display.clear()
+        self.display.setFocus()
 
     @Slot()
     def _configLeftOp(self, text):
         displayText = self.display.text()
         self.display.clear()
+        self.display.setFocus()
 
         if not ef.isValidNumber(displayText) and self._left is None:
             self._showError('Você não digitou nada.')
@@ -272,7 +275,7 @@ class ButtonsGrid(QGridLayout):
     def _eq(self):
         displayText = self.display.text()
 
-        if not ef.isValidNumber(displayText):
+        if not ef.isValidNumber(displayText) or self._left is None:
             self._showError('Conta incompleta.')
             return
 
@@ -281,7 +284,7 @@ class ButtonsGrid(QGridLayout):
         result = 0.0
 
         try:
-            if '^' in self.equation and isinstance(self._left, float):
+            if '^' in self.equation and isinstance(self._left, int | float):
                 result = math.pow(self._left, self._right)
             else:
                 result = eval(self.equation)
@@ -294,9 +297,15 @@ class ButtonsGrid(QGridLayout):
         self.memo.setText(f'{self.equation} = {result}')
         self._left = result
         self._right = None
+        self.display.setFocus()
 
         if result == 'error':
             self._left = None
+
+    @Slot()
+    def _backspace(self):
+        self.display.backspace()
+        self.display.setFocus()
 
     def _makeDialog(self, text):
         msgBox = self.window.makeMsgBox()
@@ -307,8 +316,10 @@ class ButtonsGrid(QGridLayout):
         msgBox = self._makeDialog(text)
         msgBox.setIcon(msgBox.Icon.Warning)
         msgBox.exec()
+        self.display.setFocus()
 
     def _showInfo(self, text):
         msgBox = self._makeDialog(text)
         msgBox.setIcon(msgBox.Icon.Information)
         msgBox.exec()
+        self.display.setFocus()
