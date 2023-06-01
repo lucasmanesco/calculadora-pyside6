@@ -1,0 +1,581 @@
+('D:\\Meu '
+ 'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\build\\Calculadora\\Calculadora.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True},
+ [('PYZ-00.pyz',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\build\\Calculadora\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\build\\Calculadora\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\build\\Calculadora\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\build\\Calculadora\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\build\\Calculadora\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\build\\Calculadora\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pyside6',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pyside6.py',
+   'PYSOURCE'),
+  ('main',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\app\\main.py',
+   'PYSOURCE'),
+  ('api-ms-win-crt-heap-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-heap-l1-1-0.dll',
+   'BINARY'),
+  ('python311.dll',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\python311.dll',
+   'BINARY'),
+  ('api-ms-win-crt-math-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-math-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-locale-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-locale-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('ucrtbase.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\ucrtbase.dll',
+   'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-convert-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-process-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-time-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-time-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-conio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-fibers-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-fibers-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-console-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-console-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-debug-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-timezone-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-processenvironment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-file-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-profile-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-sysinfo-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-handle-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-memory-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-memory-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-2-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-file-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforminputcontexts\\qtvirtualkeyboardplugin.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforminputcontexts\\qtvirtualkeyboardplugin.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforms\\qoffscreen.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\networkinformation\\qnetworklistmanager.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\networkinformation\\qnetworklistmanager.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\iconengines\\qsvgicon.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\iconengines\\qsvgicon.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qjpeg.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qjpeg.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\tls\\qcertonlybackend.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\tls\\qcertonlybackend.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qtga.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qtga.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qgif.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qgif.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qicns.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qicns.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qwbmp.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qwbmp.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qpdf.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qpdf.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qwebp.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\tls\\qschannelbackend.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\tls\\qschannelbackend.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qico.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qico.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\styles\\qwindowsvistastyle.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\styles\\qwindowsvistastyle.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforms\\qdirect2d.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qdirect2d.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforms\\qminimal.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qtiff.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qtiff.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\tls\\qopensslbackend.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\tls\\qopensslbackend.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforms\\qwindows.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qsvg.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qsvg.dll',
+   'BINARY'),
+  ('_decimal.pyd',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('select.pyd',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('unicodedata.pyd',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('_ctypes.pyd',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('PySide6\\QtWidgets.pyd',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\QtWidgets.pyd',
+   'EXTENSION'),
+  ('PySide6\\QtGui.pyd',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\QtGui.pyd',
+   'EXTENSION'),
+  ('PySide6\\QtCore.pyd',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\QtCore.pyd',
+   'EXTENSION'),
+  ('PySide6\\QtNetwork.pyd',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\QtNetwork.pyd',
+   'EXTENSION'),
+  ('shiboken6\\Shiboken.pyd',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\shiboken6\\Shiboken.pyd',
+   'EXTENSION'),
+  ('PySide6\\QtSvg.pyd',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\QtSvg.pyd',
+   'EXTENSION'),
+  ('PySide6\\Qt6Gui.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6Gui.dll',
+   'BINARY'),
+  ('PySide6\\Qt6Core.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6Core.dll',
+   'BINARY'),
+  ('PySide6\\Qt6Network.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6Network.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('shiboken6\\MSVCP140.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\shiboken6\\MSVCP140.dll',
+   'BINARY'),
+  ('PySide6\\Qt6VirtualKeyboard.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6VirtualKeyboard.dll',
+   'BINARY'),
+  ('PySide6\\Qt6Svg.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6Svg.dll',
+   'BINARY'),
+  ('PySide6\\Qt6Pdf.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6Pdf.dll',
+   'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Java\\zulu17.32.13-ca-jdk17.0.2-win_x64\\bin\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
+  ('PySide6\\Qt6Widgets.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6Widgets.dll',
+   'BINARY'),
+  ('libcrypto-1_1.dll',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('libffi-8.dll',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\libffi-8.dll',
+   'BINARY'),
+  ('PySide6\\pyside6.abi3.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\pyside6.abi3.dll',
+   'BINARY'),
+  ('shiboken6\\shiboken6.abi3.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\shiboken6\\shiboken6.abi3.dll',
+   'BINARY'),
+  ('PySide6\\VCRUNTIME140_1.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('PySide6\\MSVCP140.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\MSVCP140.dll',
+   'BINARY'),
+  ('python3.dll',
+   'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python311\\python3.dll',
+   'BINARY'),
+  ('PySide6\\MSVCP140_2.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\MSVCP140_2.dll',
+   'BINARY'),
+  ('shiboken6\\VCRUNTIME140_1.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\shiboken6\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('PySide6\\MSVCP140_1.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\MSVCP140_1.dll',
+   'BINARY'),
+  ('PySide6\\Qt6Quick.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6Quick.dll',
+   'BINARY'),
+  ('PySide6\\Qt6Qml.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6Qml.dll',
+   'BINARY'),
+  ('PySide6\\Qt6QmlModels.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6QmlModels.dll',
+   'BINARY'),
+  ('PySide6\\Qt6OpenGL.dll',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\Qt6OpenGL.dll',
+   'BINARY'),
+  ('files\\icon.ico',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\app\\files\\icon.ico',
+   'DATA'),
+  ('files\\icon.png',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\app\\files\\icon.png',
+   'DATA'),
+  ('base_library.zip',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\build\\Calculadora\\base_library.zip',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_cs.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_cs.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_pt_BR.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_pt_BR.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_da.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_da.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_es.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_zh_CN.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_zh_CN.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_fi.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fi.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_nl.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_nl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_hr.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_hr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_nn.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_nn.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_fr.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_de.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_en.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_en.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_hu.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_hu.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ko.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_sk.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_sk.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ar.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ar.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_bg.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_tr.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_tr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_fa.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fa.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_it.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_it.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_gd.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_he.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_he.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_uk.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_uk.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_lv.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ja.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ja.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_pl.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_pl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ca.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ca.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_zh_TW.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ru.qm',
+   'D:\\Meu '
+   'Drive\\2-ESTUDOS\\#UDEMY\\PYTHON\\Calculadora\\calculadora-pyside6\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ru.qm',
+   'DATA')],
+ False,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)
